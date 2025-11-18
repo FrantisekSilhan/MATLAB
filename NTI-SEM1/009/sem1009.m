@@ -11,3 +11,8 @@ z = zderivuj(x, y);
 plot(x, z);
 hold on;
 plot(x, cos(x));
+
+y = x.^2;
+z = zderivuj(x, y);
+hold off;
+plot(x, z);
