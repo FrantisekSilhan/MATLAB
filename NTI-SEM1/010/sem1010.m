@@ -36,3 +36,51 @@ x = cos(alpha);
 y = sin(alpha);
 
 Integral(x, y)*-2
+
+%%%
+
+x = 0:0.01:2*pi;
+y = cos(x);
+z = zintegruj(x, y);
+plot(x, z);
+hold on;
+plot(x, sin(x));
+hold off;
+
+%%%
+
+y = sin(x);
+z = zintegruj(x, y);
+plot(x, z);
+hold on;
+plot(x, -cos(x)+1);
+hold off;
+
+%%%
+
+y = sin(x);
+z = zintegruj(x, y, -1);
+plot(x, z);
+hold on;
+plot(x, -cos(x));
+hold off;
+Y = zderivuj(x, z);
+plot(x, Y);
+hold on;
+plot(x, y);
+hold off;
+
+%%%
+
+x = 1:0.01:10;
+y = log(x);
+z = zderivuj(x, y);
+plot(x, z);
+hold on;
+plot(x, 1./x);
+hold off;
+Y = 1./x;
+Z = zintegruj(x, Y);
+plot(x, Z);
+hold on;
+plot(x, y);
