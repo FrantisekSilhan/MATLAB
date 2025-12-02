@@ -1,0 +1,6 @@
+function X = jednanula()
+    X = [
+        0, 1, .9, 1, .9;
+        0, 0, .1, 0, -.1;
+    ];
+end
